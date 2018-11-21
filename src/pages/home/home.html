@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+    <ion-grid class="photosGrid">
+        <ion-row>
+            <ion-col *ngFor="let photo of photos" col-4>		
+		      	  <img [src]="photo" onError="this.src='assets/followthebirdImgs/no-profile-img.jpeg'" >     	
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+    <button ion-button color="primary" small icon-start (click)="startPayment()">
+		<ion-icon ios="ios-text" md="md-text"></ion-icon>
+		Pay with Paytm
+	</button>
+	<button ion-button (click)="pay()">
+      Pay with Razorpay
+    </button>
+</ion-content>
